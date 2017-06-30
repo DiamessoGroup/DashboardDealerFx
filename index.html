@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <!--CSS3-->
+  <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    
+  <!--Bootstrap-->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  <!-- Google Material Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  <!--Fonts Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--jQuery Ui -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+  <!--Angular JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    
+  <title>Dashboard Dealer-Fx</title>
+</head>
+
+<body>
+    <!-- Banner top -->
+    <div class="w3-red w3-container w3-padding w3-top" style="height:50px">
+        <button class="w3-btn w3-hide-large" id="menuButton"><span class="glyphicon glyphicon-menu-hamburger" ></span> Menu</button>
+        <h4 class="w3-right"><strong>Dealer-FX</strong></h4>
+    </div>
+    
+    <!--Sidebar Navigation -->
+    <nav class="w3-sidenav w3-collapse w3-white w3-card-4" style="width:200px">
+        <div class="w3-center w3-padding-top">
+            <p><img src="img/avatar1.png" alt="Avatar Profile" style="width:25%;border-radius:50%"></p>
+            <p>Service Advisor<br>
+                <span class="glyphicon glyphicon-map-marker"></span><span>Motorcity Mitsubishi <br><small>99667</small></span></p>
+        </div>
+        
+        <hr>
+        <div class="w3-hide-large">
+            <button class="w3-btn w3-btn-block w3-red w3-padding w3-hover-black w3-margin-bottom" id="closeMenu">Close Menu</button>
+            <br>
+        </div>
+        <a href="#" class="w3-blue w3-padding">Mitsubishi Dashboard</a>
+        <a href="#routeSheet" class="w3-padding w3-hover-blue-grey">Route Sheet</a>
+        <a href="#calendar" class="w3-padding w3-hover-blue-grey">Calendar</a>
+        <a href="#performance" class="w3-padding w3-hover-blue-grey">Performance</a>
+        <a href="#toDo" class="w3-padding w3-hover-blue-grey">To Do</a>
+        <a href="#comments" class="w3-padding w3-hover-blue-grey">Recent Comments</a>
+        <a href="#generalStats" class="w3-padding w3-hover-blue-grey">General Stats</a>
+        <a href="#inventory" class="w3-padding w3-hover-blue-grey">Inventory</a>        
+    </nav>
+    
+    <!--Main -->
+    <div id="main" class="w3-main w3-row-padding w3-light-grey w3-container" style="margin-left:200px;margin-top:50px">
+        
+        <!-- Overview Dashboard -->
+        <div class="w3-row-padding w3-padding-16">
+            <!--Ready -->    
+            <div class="w3-col l4">
+                    <div class="w3-container w3-green w3-padding-16">
+                         <div class="w3-left">
+                            <i class="material-icons w3-xxxlarge">thumb_up</i>
+                        </div>
+                
+                        <div class="w3-right">
+                            <h3>8</h3>
+                        </div>
+                        <div class="w3-clear">
+                            <h3>Ready</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--Delayed -->
+                <div class="w3-col l4">
+                    <div class="w3-container w3-amber w3-padding-16">
+                        <div class="w3-left">
+                            <i class="material-icons w3-xxxlarge">assignment_late</i>
+                        </div>
+                        
+                        <div class="w3-right">
+                            <h3>5</h3>
+                        </div>
+                        
+                        <div class="w3-clear">
+                            <h3>Delayed</h3>
+                        </div>
+                    </div>
+                </div>
+                    
+                <!--Require Attention -->
+                <div class="w3-col l4">
+                    <div class="w3-container w3-red w3-padding-16">
+                        <div class="w3-left">
+                            <i class="material-icons w3-xxxlarge">pan_tool</i>
+                        </div>
+                        
+                        <div class="w3-right">
+                            <h3>2</h3>
+                        </div>
+                        
+                        <div class="w3-clear">                    
+                            <h3>Require Attention</h3>
+                        </div>
+                    </div>
+                </div>
+            </div><!--End Overview Board-->
+    
+    <!--Left Row -->
+    <div class="w3-col l6 w3-padding-16">
+            
+        <!--Route Sheet Board -->
+            <div class="w3-card-8 w3-white w3-padding-32" id="routeSheet">
+                <div class="w3-container">
+                    <div>
+                        <h3>Route Sheet</h3>
+                        <p class="w3-left">Live Feed of Vehicles</p>
+                    
+                    <div class="w3-right">
+                        <span class="w3-leftbar w3-border-blue w3-padding-small"> Service Advisor</span> 
+                        <span class="w3-leftbar w3-border-yellow w3-padding-small"> Technician</span>
+                    </div>
+                        <div class="w3-clear">
+                        </div>
+                </div>
+                <hr>
+                <div style="height:250px;overflow-y:scroll">
+                    <table class="w3-table w3-striped" >
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi RVR VF567890<br>
+                            <small class="w3-opacity-min">Vehicle is in the Evir Process</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-yellow">
+                            <td>12459</td>
+                            <td>Mitsubishi Eclipse RT543212<br>
+                            <small class="w3-opacity-min">Recall Inspection</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi Lancer<br>
+                            <small class="w3-opacity-min">Missing Vin</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi Outlander VXX457890<br>
+                            <small class="w3-opacity-min">Tire Rotation</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-yellow">
+                            <td>12459</td>
+                            <td>Mitsubishi Mirage DC0143212<br>
+                            <small class="w3-opacity-min">Lube Oil and Filter</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi Lancer<br>
+                            <small class="w3-opacity-min">Missing Key</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi RVR VF567890<br>
+                            <small class="w3-opacity-min">Vehicle is in the Evir Process</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-yellow">
+                            <td>12459</td>
+                            <td>Mitsubishi Eclipse RT543212<br>
+                            <small class="w3-opacity-min">Recall Inspection</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi Lancer<br>
+                            <small class="w3-opacity-min">Missing Vin</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi Outlander VXX457890<br>
+                            <small class="w3-opacity-min">Tire Rotation</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-yellow">
+                            <td>12459</td>
+                            <td>Mitsubishi Mirage DC0143212<br>
+                            <small class="w3-opacity-min">Lube Oil and Filter</small></td>
+                        </tr>
+                        <tr class="w3-leftbar w3-border-blue">
+                            <td>12459</td>
+                            <td>Mitsubishi Lancer<br>
+                            <small class="w3-opacity-min">Missing Key</small></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>        
+        </div><!--End Route Sheet-->
+        <br>
+        
+        <!--performance Board -->
+        <div class="w3-card-8 w3-white w3-padding-32" id="performance">
+            <div class="w3-container">
+                <h3>Performance</h3>
+                <hr>
+                <table class="w3-table w3-striped w3-white">
+                    <tr>
+                        <td>Push Count</td>
+                        <td><i>65%</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Total $ Pushed</td>
+                        <td><i>1509$</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Average Dollars Per Ro</td>
+                        <td><i>20$</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Hours Sold</td>
+                        <td><i>51.00</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Utilization %</td>
+                        <td><i>1.9%</i></td>
+                    </tr>
+
+                    <tr>
+                        <td>Maintenance Penetration $</td>
+                        <td><i>23.5%</i></td>
+                    </tr>
+                </table>
+            </div>
+        </div><!--End Performance Board-->
+        <br>
+        <!--Recent Comments -->
+        <div class="w3-card-8 w3-white w3-padding-32" id="comments">
+            <div class="w3-container">
+                <h3>Recent Comments</h3>
+                <hr>
+                <div class="w3-row-padding w3-padding-16">
+                    <div class="w3-quarter">
+                        <img src="img/avatar1.png" alt="Avatar 1" class="w3-image" style="width:50%;border-radius:50%">
+                    </div>
+                    <div class="w3-threequarter">
+                        <h5><strong>Jason Bourne</strong></h5>
+                        <p>Feb 29, 2017, 9:12 PM</p>
+                        <p>Parts needed for tag #731</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="w3-row-padding w3-padding-16">
+                    <div class="w3-quarter">
+                        <img src="img/avatar2.png" alt="Avatar 1" class="w3-image" style="width:50%;border-radius:50%">
+                    </div>
+                    <div class="w3-threequarter">
+                        <h5><strong>Mr. Barney Stinson</strong></h5>
+                        <p>Feb 29, 2017, 10:15 PM</p>
+                        <p>Can Anyone pod vehicles?</p>
+                    </div>
+                </div>
+            </div>
+        </div><!--End Recent Comments-->
+        
+        <br>
+        
+        <!--Inventory with AngularJS-->
+        <div class="w3-card-8 w3-white w3-padding-32" id="inventory" ng-app="myInventory" ng-controller="MainController">
+            <div class="w3-container" >
+                <h3>Inventory</h3>
+                
+                <hr>
+                
+                <ul class="w3-ul w3-card-2 w3-hover-amber" ng-repeat="car in cars">
+                    <li class="w3-margin w3-padding">
+                    <!--<span onclick="this.parentElement.style.display='none'" class="w3-closebtn w3-padding">&times;</span>-->
+                    <span class="w3-large">{{ car.model }}</span><br>
+                        <span><strong>{{ car.quantity }}</strong></span>
+                    </li>
+                </ul>
+            </div>
+        </div><!--End Inventory-->
+        
+    </div> <!--End Left Row--> 
+                
+                
+    <!--Right Row  -->            
+    <div class="w3-col l6 w3-padding-16">
+        
+        <!-- Calendar Board -->
+        <div class="w3-card-8 w3-white w3-padding-32" id="calendar">
+            <div class="w3-container">
+                <div>
+                    <h3>February 2017<i class="material-icons" style="font-size:15px"><a href="#" style="text-decoration:none">arrow_drop_down_circle</a></i></h3>
+                </div>
+                <hr>
+                <table class="w3-table w3-center" >
+                        <tr>
+                            <td>M</td>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>T</td>
+                            <td>F</td>
+                            <td>S</td>
+                            <td>S</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td class="w3-red">21</td>
+                            <td>22</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                </table>
+            </div>
+        </div><!--End Calendar Board-->
+        
+        <br>
+        
+        <!-- To Do Items -->
+        <div class="w3-card-8 w3-white w3-padding-32" id="toDo">
+            <div class="w3-container">
+                <div>
+                    <h3>To-Do</h3>
+                    <p>Add your Action Items or rearrange them by priority</p>
+                </div>
+                <hr>
+                <div id="itemToDo" class="sortable">
+                    <div class="w3-card-2 w3-light-blue w3-padding w3-margin">
+                        <p>Create RO for Lancer FJDH098<i class="fa fa-close w3-right w3-margin-right closex" style="font-size:20px;cursor:pointer"></i></p>
+                    </div>
+                    <div class="w3-card-2 w3-light-blue w3-padding w3-margin">
+                        <p>Send RVR for MPI<i class="fa fa-close w3-right w3-margin-right closex" style="font-size:20px;cursor:pointer"></i></p>
+                    </div>
+                    <div class="w3-card-2 w3-light-blue w3-padding w3-margin">
+                        <p>Remind Brandon to expedite Outlander<i class="fa fa-close w3-right w3-margin-right closex" style="font-size:20px;cursor:pointer"></i></p>
+                    </div>
+                </div>
+                <div class="w3-card-2 w3-light-grey w3-padding w3-margin">
+                    <input type="text" style="width:75%;height:30px" id="inputToDo"><button type="button" class="w3-btn btn-sm w3-margin-left w3-right w3-margin-right" id="buttonToDo">+</button>
+                </div>
+                <!--
+                <div>
+                    <button type="button" class="w3-card-2 w3-light-grey w3-padding w3-margin w3-btn w3-btn-block btn-sm w3-margin-left w3-hide-large" id="buttonToDo">ADD</button>
+                </div>-->
+            </div>
+        </div><!--End To Do Items--> 
+        
+        <br>
+        
+        <!--Stats-->
+        <div class="w3-card-8 w3-white w3-padding-32" id="generalStats">
+            <div class="w3-container">
+                <div>
+                    <h3>General Stats</h3>
+                </div>
+                <hr>
+                <div class="w3-padding-16">
+                    <h5>Booked</h5>
+                    <div class="w3-grey">
+                        <div class="w3-container w3-green w3-center" style="width:75%">75%</div>
+                    </div>
+                </div>
+
+                <div class="w3-padding-16">
+                    <h5>Shown</h5>
+                    <div class="w3-grey">
+                        <div class="w3-container w3-orange w3-center" style="width:50%">50%</div>
+                    </div>
+                </div>
+
+                <div class="w3-padding-16">
+                    <h5>Missed</h5>
+                    <div class="w3-grey">
+                        <div class="w3-container w3-red w3-center" style="width:75%">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>  <!--End Stats-->
+    </div> <!--End Right Row-->
+        
+</div> <!--End Main-->
+        
+    <script src="js/mainFile.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/MainController.js"></script>
+</body>
+    
+</html>
